@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Pangolin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pangolin/v11/cY9GfjGcW0FPpi-tWPfK.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pangolin', cursive;
+}
+p {
+  margin: 0;
+}
+#navBar {
+  background-color: #c4e1ff;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#navBar #navLeft {
+  display: flex;
+  align-items: center;
+}
+#navBar #searchContainer {
+  margin-left: 15px;
+}
+#navBar #searchContainer #searchBar {
+  width: 34vw;
+  border-radius: 15px;
+  padding-left: 1vw;
+}
+#navBar #siteLogo {
+  height: 8vh;
+  width: auto;
+}
+#navBar #navMiddle > a {
+  margin-left: 15px;
+}
+#navBar #cartLink {
+  margin-right: 5px;
+}
+#navBar .hamburger {
+  display: none;
+}
+#altSearch {
+  display: none;
+}
+.concertList {
+  max-width: 800px;
+  margin-bottom: 25px;
+}
+.concertList .concertImgCol {
+  display: flex;
+  justify-content: center;
+}
+.concertList .concertInfoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.concertList .concertImg {
+  width: 85%;
+  height: auto;
+  max-height: 190px;
+  max-width: 400px;
+}
+.concertList .concertRow {
+  margin-top: 25px;
+}
+@media screen and (max-width: 950px) {
+  #navBar .hamburger {
+    display: block;
+  }
+  #navBar #browseLink,
+  #navBar #ticketsLink,
+  #navBar #cartLink,
+  #navBar #logInLink {
+    display: none;
+  }
+  #navBar #searchContainer #searchBar {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 650px) {
+  #searchContainer {
+    display: none;
+  }
+  #altSearch {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  #altSearch #altSearchBar {
+    width: 85vw;
+    border-radius: 15px;
+    padding-left: 2vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .concertList .concertInfoCol {
+    align-items: center;
+  }
+  .concertList .concertHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .concertList .concertHeader h2 {
+    margin-bottom: 0;
+  }
+  .concertList .concertHeader p {
+    margin-bottom: 10px;
+  }
+}

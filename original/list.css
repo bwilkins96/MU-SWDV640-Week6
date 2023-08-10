@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto&display=swap');
+
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pangolin', cursive;
+}
+
+p {
+    margin: 0;
+}
+
+/* Colors */
+.red {
+    background-color: rgb(255, 179, 186);
+}
+
+.orange {
+    background-color: rgb(255, 223, 186);
+}
+
+.yellow {
+    background-color: rgb(255, 255, 186);
+}
+
+.green {
+    background-color: rgb(186, 255, 201);
+}
+
+.blue {
+    background-color: rgb(196, 225, 255);
+}
+
+/* Navbar */
+#navBar {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#navLeft {
+    display: flex;
+    align-items: center;
+}
+
+#searchContainer {
+    margin-left: 15px;
+}
+
+#searchBar {
+    width: 34vw;
+    border-radius: 15px;
+    padding-left: 1vw;
+}
+
+#siteLogo {
+    height: 8vh;
+    width: auto;
+}
+
+#navMiddle > a {
+    margin-left: 15px;
+}
+
+#cartLink {
+    margin-right: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+#altSearch {
+    display: none;
+}
+
+/* Concert List */
+.concertList {
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.concertImgCol {
+    display: flex;
+    justify-content: center;
+}
+
+.concertInfoCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.concertImg {
+    width: 85%;
+    height: auto;
+    max-height: 190px;
+    max-width: 400px;
+    /* border: 2px solid red; */
+}
+
+.concertRow {
+    margin-top: 25px;
+}
+
+/* .concertRow > div {
+    border: 2px solid black;
+} */
+
+/* Media Queries */
+@media screen and (max-width: 950px) {
+    .hamburger {
+        display: block;
+    }
+
+    #browseLink, #ticketsLink, #cartLink, #logInLink {
+        display: none;
+    }
+
+    #searchBar {
+        width: 50vw;
+    }
+} 
+
+@media screen and (max-width: 650px) {
+    #searchContainer {
+        display: None;
+    }
+
+    #altSearch {
+        display: block;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    #altSearchBar {
+        width: 85vw;
+        border-radius: 15px;
+        padding-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .concertInfoCol {
+        align-items: center;
+    }
+
+    .concertHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .concertHeader h2 {
+        margin-bottom: 0;
+    }
+
+    .concertHeader p {
+        margin-bottom: 10px;
+    }
+}

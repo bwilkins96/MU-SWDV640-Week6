@@ -1,0 +1,169 @@
+// SWDV 640: User Interface Design 
+// Week 6 LESS Stylesheet Assignment
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto&display=swap');
+
+// Variables
+@red: rgb(255, 179, 186);
+@orange: rgb(255, 223, 186);
+@yellow: rgb(255, 255, 186);
+@green: rgb(186, 255, 201);
+@blue: rgb(196, 225, 255);
+
+// Mixins
+.fit-content() {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.hide() {
+    display: none;
+}
+
+// General
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pangolin', cursive;
+}
+
+p {
+    margin: 0;
+}
+
+// Navbar
+#navBar {
+    background-color: @blue;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    #navLeft {
+        display: flex;
+        align-items: center;
+    }
+
+    #searchContainer {
+        margin-left: 15px;
+
+        #searchBar {
+            width: 34vw;
+            border-radius: 15px;
+            padding-left: 1vw;
+        }
+    }
+
+    #siteLogo {
+        height: 8vh;
+        width: auto;
+    }
+
+    #navMiddle > a {
+        margin-left: 15px;
+    }
+
+    #cartLink {
+        margin-right: 5px;
+    }  
+
+    .hamburger {
+        .hide();
+    }
+}
+
+#altSearch {
+    .hide();
+}
+
+// Concert List
+.concertList {
+    max-width: 800px;
+    margin-bottom: 25px;
+
+    .concertImgCol {
+        display: flex;
+        justify-content: center;
+    }
+
+    .concertInfoCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .concertImg {
+        width: 85%;
+        height: auto;
+        max-height: 190px;
+        max-width: 400px;
+    }
+
+    .concertRow {
+        margin-top: 25px;
+    }
+}
+
+// Media Queries
+@media screen and (max-width: 950px) {
+    #navBar {
+        .hamburger {
+            display: block;
+        }
+    
+        #browseLink, #ticketsLink, #cartLink, #logInLink {
+            .hide();
+        }
+        
+        #searchContainer {
+            #searchBar {
+                width: 50vw;
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 650px) {
+    #searchContainer {
+        .hide();
+    }
+
+    #altSearch {
+        .fit-content();
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+
+        #altSearchBar {
+            width: 85vw;
+            border-radius: 15px;
+            padding-left: 2vw;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .concertList {
+        .concertInfoCol {
+            align-items: center;
+        }
+    
+        .concertHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            h2 {
+                margin-bottom: 0;
+            }
+    
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+   
+}
