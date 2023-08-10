@@ -33,6 +33,10 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 // Navbar
 #navBar {
     background-color: @blue;
@@ -41,6 +45,17 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+
+    #browseLink, #ticketsLink, #cartLink, #logInLink {
+        color: darken(@blue, 45%);
+        padding: 5px;
+        border-radius: 50%;
+
+        &:hover {
+            color: darken(@blue, 55%);
+            background-color: @green;
+        }
+    }
     
     #navLeft {
         display: flex;
@@ -72,6 +87,11 @@ p {
 
     .hamburger {
         .hide();
+        
+        button {
+            background-color: @green;
+            color: darken(@green, 70%);
+        }
     }
 }
 
@@ -100,10 +120,18 @@ p {
         height: auto;
         max-height: 190px;
         max-width: 400px;
+        border: 4px solid @green;
+        transition: 0.2s;
     }
 
     .concertRow {
         margin-top: 25px;
+
+        &:hover {
+            .concertImg {
+                border-color: darken(@green, 25%);
+            }
+        }
     }
 }
 

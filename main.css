@@ -26,6 +26,9 @@ h6 {
 p {
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 #navBar {
   background-color: #c4e1ff;
   height: 8vh;
@@ -33,6 +36,21 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+}
+#navBar #browseLink,
+#navBar #ticketsLink,
+#navBar #cartLink,
+#navBar #logInLink {
+  color: #006ddd;
+  padding: 5px;
+  border-radius: 50%;
+}
+#navBar #browseLink:hover,
+#navBar #ticketsLink:hover,
+#navBar #cartLink:hover,
+#navBar #logInLink:hover {
+  color: #0054aa;
+  background-color: #baffc9;
 }
 #navBar #navLeft {
   display: flex;
@@ -59,6 +77,10 @@ p {
 #navBar .hamburger {
   display: none;
 }
+#navBar .hamburger button {
+  background-color: #baffc9;
+  color: #005412;
+}
 #altSearch {
   display: none;
 }
@@ -80,9 +102,14 @@ p {
   height: auto;
   max-height: 190px;
   max-width: 400px;
+  border: 4px solid #baffc9;
+  transition: 0.2s;
 }
 .concertList .concertRow {
   margin-top: 25px;
+}
+.concertList .concertRow:hover .concertImg {
+  border-color: #3bff65;
 }
 @media screen and (max-width: 950px) {
   #navBar .hamburger {
