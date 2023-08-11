@@ -33,6 +33,7 @@ button {
   border: 1px solid black;
   border-radius: 40px;
   padding: 15px;
+  background-color: #ffdfba;
 }
 button:active {
   border-color: white;
@@ -42,6 +43,15 @@ button:active {
 }
 .darkTheme .concertList .concertRow {
   color: white;
+}
+.darkTheme .concertList .concertRow .concertTitle {
+  color: #baffc9;
+}
+.darkTheme .concertList .concertRow .concertAt {
+  color: #ffffba;
+}
+.darkTheme .concertList .concertRow .concertVenue {
+  color: #ffdfba;
 }
 .darkTheme #themeSwitcher {
   background-color: #ffdfba;

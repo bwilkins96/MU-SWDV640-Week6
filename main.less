@@ -44,6 +44,7 @@ button {
     border: 1px solid black;
     border-radius: 40px;
     padding: 15px;
+    background-color: @orange;
 
     &:active {
         border-color: white;
@@ -57,6 +58,18 @@ button {
     .concertList {
         .concertRow {
             color: white;
+
+            .concertTitle {
+                color: @green;
+            }
+
+            .concertAt {
+                color: @yellow;
+            }
+
+            .concertVenue {
+                color: @orange;
+            }
         }
     }
 
@@ -261,7 +274,6 @@ input[type='checkbox'], input[type='radio'] {
         }
     }
 }
-
 
 // Media Queries
 @media screen and (max-width: 950px) {
