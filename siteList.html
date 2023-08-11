@@ -15,6 +15,7 @@
         <link href="main.css" rel="stylesheet">
         
         <script src="https://kit.fontawesome.com/4179169019.js" crossorigin="anonymous"></script>
+        <script src="changeTheme.js"></script>
        </head>
 
     <body>
@@ -61,10 +62,13 @@
                 <input type="search" id="altSearchBar" placeholder="search for concerts..." aria-label="search for concerts, artists, and venues...">
             </div>
 
+            <i id="themeSwitcher" class="fa-solid fa-sun fa-xl" onclick="changeTheme();"></i>
+            
+
             <!-- Concert list -->
             <div class="container concertList" role="region" aria-label="concert list">
                 
-                <div class="row concertRow">
+                <a href="#" class="row concertRow">
                     <div class="col-sm-7 concertImgCol">
                         <img class="concertImg" src="images/wireframe_img.png" alt="concert image">
                     </div>
@@ -76,9 +80,9 @@
 
                         <p>$25.00 - $500.00</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="row concertRow">
+                <a href="#" class="row concertRow">
                     <div class="col-sm-7 concertImgCol">
                         <img class="concertImg" src="images/wireframe_img.png" alt="concert image">
                     </div>
@@ -90,9 +94,9 @@
 
                         <p>$25.00 - $500.00</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="row concertRow">
+                <a href="#" class="row concertRow">
                     <div class="col-sm-7 concertImgCol">
                         <img class="concertImg" src="images/wireframe_img.png" alt="concert image">
                     </div>
@@ -104,9 +108,29 @@
 
                         <p>$25.00 - $500.00</p>
                     </div>
-                </div>
+                </a>
+
+                <a href="#" class="row concertRow">
+                    <div class="col-sm-7 concertImgCol">
+                        <img class="concertImg" src="images/wireframe_img.png" alt="concert image">
+                    </div>
+                    <div class="col-sm-5 concertInfoCol">
+                        <div class="concertHeader">
+                            <h2>Concert @ Venue</h2>
+                            <p>8:00 PM dd/mm/yyyy</p>
+                        </div>
+
+                        <p>$25.00 - $500.00</p>
+                    </div>
+                </a>
 
             </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>Ben Wilkins</p>
+                <p>SWDV 640</p>
+            </footer>
         </main>
 
 

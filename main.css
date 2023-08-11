@@ -29,6 +29,37 @@ p {
 a {
   text-decoration: none;
 }
+button {
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 15px;
+}
+button:active {
+  border-color: white;
+}
+.darkTheme {
+  background-color: #232323;
+}
+.darkTheme .concertList .concertRow {
+  color: white;
+}
+.darkTheme #themeSwitcher {
+  background-color: #ffdfba;
+  border-color: white;
+}
+#themeSwitcher {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  padding: 17.5px;
+  border-radius: 50%;
+  border: 1px solid #212529;
+  background-color: #ffffba;
+  color: #ff9821;
+}
+#themeSwitcher:hover {
+  color: #ed7f00;
+}
 #navBar {
   background-color: #c4e1ff;
   height: 8vh;
@@ -39,18 +70,29 @@ a {
 }
 #navBar #browseLink,
 #navBar #ticketsLink,
-#navBar #cartLink,
-#navBar #logInLink {
-  color: #006ddd;
+#navBar #logInLink,
+#navBar #cartLink {
   padding: 5px;
   border-radius: 50%;
 }
+#navBar #browseLink,
+#navBar #ticketsLink,
+#navBar #logInLink {
+  color: #006ddd;
+}
 #navBar #browseLink:hover,
 #navBar #ticketsLink:hover,
-#navBar #cartLink:hover,
 #navBar #logInLink:hover {
   color: #0054aa;
   background-color: #baffc9;
+}
+#navBar #cartLink {
+  color: #ff9821;
+  background-color: #ffffba;
+}
+#navBar #cartLink:hover {
+  color: #ff8c08;
+  background-color: #ffdfba;
 }
 #navBar #navLeft {
   display: flex;
@@ -63,6 +105,9 @@ a {
   width: 34vw;
   border-radius: 15px;
   padding-left: 1vw;
+}
+#navBar #searchContainer i {
+  color: #006ddd;
 }
 #navBar #siteLogo {
   height: 8vh;
@@ -78,11 +123,55 @@ a {
   display: none;
 }
 #navBar .hamburger button {
+  background-color: #ffffba;
+  color: #ff8c08;
+}
+#navBar .hamburger a {
+  color: #0054aa;
+}
+#navBar .hamburger a:hover {
   background-color: #baffc9;
-  color: #005412;
+}
+#navBar .hamburger .dropdown-header {
+  background-color: #ffa43b;
+  color: black;
+}
+#navBar .hamburger .dropdown-menu {
+  background-color: #ffdfba;
 }
 #altSearch {
   display: none;
+}
+footer {
+  height: 8vh;
+  background-color: #ffdfba;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+label {
+  font-weight: 600;
+  margin-right: 10px;
+}
+input[type='text'] {
+  padding: 5px;
+  border-radius: 5px;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  height: 17.5px;
+  width: 17.5px;
+}
+.formEle {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.message {
+  font-weight: 600;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
 }
 .concertList {
   max-width: 800px;
@@ -106,6 +195,7 @@ a {
   transition: 0.2s;
 }
 .concertList .concertRow {
+  color: #212529;
   margin-top: 25px;
 }
 .concertList .concertRow:hover .concertImg {
@@ -120,6 +210,10 @@ a {
   #navBar #cartLink,
   #navBar #logInLink {
     display: none;
+  }
+  #navBar #themeSwitcher {
+    display: none;
+    color: blue;
   }
   #navBar #searchContainer #searchBar {
     width: 50vw;
@@ -140,6 +234,9 @@ a {
     width: 85vw;
     border-radius: 15px;
     padding-left: 2vw;
+  }
+  #altSearch i {
+    color: #006ddd;
   }
 }
 @media screen and (max-width: 576px) {
