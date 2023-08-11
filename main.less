@@ -163,9 +163,17 @@ button {
             }
         }
 
+        p {
+            color: darken(@green, 65%);
+
+            &:hover {
+                background-color: @blue;
+            }
+        }
+
         .dropdown-header {
             background-color: darken(@orange, 25%);
-            color: black;
+            color: @textBlack;
         }
 
         .dropdown-menu {
@@ -212,7 +220,7 @@ input[type='checkbox'], input[type='radio'] {
 // Messages
 .message {
     font-weight: 600;
-    color: black;
+    color: @textBlack;
     padding: 10px;
     border-radius: 8px;
 }
@@ -265,17 +273,16 @@ input[type='checkbox'], input[type='radio'] {
         #browseLink, #ticketsLink, #cartLink, #logInLink {
             .hide();
         }
-
-        #themeSwitcher {
-            .hide();
-            color: blue;
-        }
         
         #searchContainer {
             #searchBar {
                 width: 50vw;
             }
         }
+    }
+
+    #themeSwitcher {
+        .hide();
     }
 } 
 

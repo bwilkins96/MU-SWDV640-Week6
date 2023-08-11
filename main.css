@@ -132,9 +132,15 @@ button:active {
 #navBar .hamburger a:hover {
   background-color: #baffc9;
 }
+#navBar .hamburger p {
+  color: #006e18;
+}
+#navBar .hamburger p:hover {
+  background-color: #c4e1ff;
+}
 #navBar .hamburger .dropdown-header {
   background-color: #ffa43b;
-  color: black;
+  color: #212529;
 }
 #navBar .hamburger .dropdown-menu {
   background-color: #ffdfba;
@@ -169,7 +175,7 @@ input[type='radio'] {
 }
 .message {
   font-weight: 600;
-  color: black;
+  color: #212529;
   padding: 10px;
   border-radius: 8px;
 }
@@ -211,12 +217,11 @@ input[type='radio'] {
   #navBar #logInLink {
     display: none;
   }
-  #navBar #themeSwitcher {
-    display: none;
-    color: blue;
-  }
   #navBar #searchContainer #searchBar {
     width: 50vw;
+  }
+  #themeSwitcher {
+    display: none;
   }
 }
 @media screen and (max-width: 650px) {
